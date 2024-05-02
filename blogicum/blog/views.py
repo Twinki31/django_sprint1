@@ -56,7 +56,7 @@ def index(request):
 
 
 def post_detail(request, post_id):
-    if post_id > 2:
+    if len(posts) <= post_id:
         return HttpResponseNotFound('Страница не найдена')
     else:
         template = 'blog/detail.html'
